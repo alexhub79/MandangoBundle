@@ -56,6 +56,11 @@ class MandangoExtension extends Extension
             $container->getDefinition('mandango')->addMethodCall('setDefaultConnectionName', array($config['default_connection']));
         }
 
+        // default_language
+        if (isset($config['default_language'])) {
+            $container->getDefinition('mandango')->addMethodCall('setDefaultLanguage', array($config['default_language']));
+        }
+
         // extra config classes dirs
         $container->setParameter('mandango.extra_config_classes_dirs', $config['extra_config_classes_dirs']);
 

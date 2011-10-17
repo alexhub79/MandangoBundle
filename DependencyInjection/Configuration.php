@@ -38,6 +38,7 @@ class Configuration
                 ->scalarNode('model_dir')->end()
                 ->booleanNode('logging')->end()
                 ->scalarNode('default_connection')->end()
+				->scalarNode('default_language')->end()
             ->end()
 
             ->fixXmlConfig('extra_config_classes_dir')
